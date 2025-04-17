@@ -219,13 +219,13 @@ function bleibtBeiMultiplikationMit3Unter1000(zahl) {
             return "\n// Wenn man die gesuchte Zahl mit 3 multipliziert, bleibt das Produkt unter 1000. Und wenn man sie halbiert, bleibt es bei einer dreistelligen Zahl.";
         }
     }
-    else if (zahl * 3 <= 1000 && zahl * 3 <= 1500) {
+    else if (zahl * 3 >= 1000 && zahl * 3 <= 1500) {
         return "\n// Wenn man die gesuchte Zahl mit 3 multipliziert, landet man bei einer Zahl zwischen 1000 und 1500!";
     }
-    else if (zahl * 3 <= 1500 && zahl * 3 <= 2000) {
+    else if (zahl * 3 >= 1500 && zahl * 3 <= 2000) {
         return "\n// Wenn man die gesuchte Zahl mit 3 multipliziert, landet man bei einer Zahl zwischen 1500 und 2000!";
     }
-    else if (zahl * 3 <= 2000 && zahl * 3 <= 2500) {
+    else if (zahl * 3 >= 2000 && zahl * 3 <= 2500) {
         return "\n// Wenn man die gesuchte Zahl mit 3 multipliziert, landet man bei einer Zahl zwischen 2000 und 2500!";
     }
     else {
