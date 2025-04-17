@@ -1,6 +1,0 @@
-<h1>Invoice Manager App</h1>
-<div><p>Es gibt {{customers.length}} Kunden.</p></div>
-<app-customer-list [costumerList]="customerMockList|async" (customerSelectedEvent)="handleCustomerSelected($event)"></app-customer-list>
-<app-customer-detail-list [customerDetails]="this.selectedCustomer"></app-customer-detail-list>
-
-
