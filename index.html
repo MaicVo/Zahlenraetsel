@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zahlenraten</title>
+</head>
+<body>
+<p><label><b>Guess The Number</b><br>
+    <p><label>Errate die zufällige Zahl zwischen 0 und 1000. Du hast maximal 5 Versuche.<br>
+        Vor einem Versuch darfst du dir (nur) einen Tipp holen. So kannst du dir bis zu 3
+        Tipps geben lassen.<br>Jedoch musst du mindestens zwei mal versuchen, die gesuchte Zufallszahl zu erraten, bevor du um den nächsten Tipp bitten darfst.<br><br>Gib eine Zahl ein bestätige die Eingabe durch das Klicken auf den dazugehörigen
+        Button: </label> <input id="eingabe" type="number"/></p>
+    <p>
+        <button id="pruefenButton">Eingabe bestätigen und überprüfen</button>
+    </p>
+    <p><label>Anzahl der restlichen Versuche:</label>
+        <output id="restVersuche" type="string"/>
+    </p>
+        <p><label>Hier kommt das Ergebnis der Prüfung:</label>
+        <output id="result" type="string"/>
+    </p>
+    <p><label><br><b>Tipp</b><br>
+        <p>
+            <button id="tipp">Gib mir bitte einen Tipp</button>
+        </p>
+        <p><label>Hier ein Tipp:</label>
+            <output id="tippText" type="string"/>
+        </p>
+        <p><label>Anzahl der restlichen Tipps:</label>
+            <output id="tippNumber" type="string"/>
+            <br><br></p>
+        <p><label><br><b>Restart</b><br>
+            <p>
+                <button id="generiereNeu">Neustart - Generiere eine neue Zufallszahl</button>
+                <br><br></p>
+            <script src="app.js"></script>
+</body>
+</html>

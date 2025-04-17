@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    <li *ngFor="let customer of costumerList">
+      <span [class.selected]="customer == selectedCustomer" [class.discontinued]="customer.discontinued" (click)="customerSelected(customer)"> {{customer.firstname}}</span>
+      </li>
+  </ul>
+</div>

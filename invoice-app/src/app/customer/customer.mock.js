@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CUSTOMER = exports.CUSTOMER5 = exports.CUSTOMER4 = exports.CUSTOMER3 = exports.CUSTOMER2 = exports.CUSTOMER1 = void 0;
+const customer_1 = require("../customer");
+exports.CUSTOMER1 = new customer_1.Customer("Firstname A", "Lastname A", "Steet A", "Zip A", " City A", true, "", new Date(2025, 4, 4));
+exports.CUSTOMER2 = new customer_1.Customer("Firstname B", "Lastname B", "Steet B", "Zip B", " City B", false, "homer.jpg", new Date(2025, 4, 9));
+exports.CUSTOMER3 = new customer_1.Customer("Firstname C", "Lastname C", "Steet C", "Zip C", " City C", false, "marge.jpg", new Date(2025, 3, 4));
+exports.CUSTOMER4 = new customer_1.Customer("Firstname D", "Lastname D", "Steet D", "Zip D", " City D", false, "homer.jpg", new Date(2025, 4, 2));
+exports.CUSTOMER5 = new customer_1.Customer("Firstname E", "Lastname E", "Steet E", "Zip E", " City E", true, "marge.jpg", new Date(2025, 2, 9));
+exports.CUSTOMER = [exports.CUSTOMER1, exports.CUSTOMER2, exports.CUSTOMER3, exports.CUSTOMER4, exports.CUSTOMER5];
