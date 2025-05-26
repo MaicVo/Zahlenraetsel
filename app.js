@@ -1,17 +1,25 @@
-"use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 var ausgedachteZahl = Math.floor(Math.random() * 1000);
 var restTipps = 3;
 var tippBlocker = 0;
 var tippAlsString = "";
 var anzahlVersuche = 5;
-let eingabe = document.getElementById("eingabe");
-let ausgabe = document.getElementById("result");
-let tippText = document.getElementById("tippText");
-let tippNumber = document.getElementById("tippNumber");
-let restVersuche = document.getElementById("restVersuche");
+var eingabe = document.getElementById("eingabe");
+var ausgabe = document.getElementById("result");
+var tippText = document.getElementById("tippText");
+var tippNumber = document.getElementById("tippNumber");
+var restVersuche = document.getElementById("restVersuche");
 tippNumber.innerHTML = restTipps.toString();
 restVersuche.innerHTML = anzahlVersuche.toString();
-const tippFunktionen = [
+var tippFunktionen = [
     berechneQuersumme,
     istPrimzahl,
     teilbarDurch,
@@ -25,8 +33,8 @@ const tippFunktionen = [
     getIntervall,
     addiereErsteUndZweiteZiffer
 ];
-let verbleibendeTipps = [...tippFunktionen];
-let pruefenButton = document.getElementById("pruefenButton");
+var verbleibendeTipps = __spreadArray([], tippFunktionen, true);
+var pruefenButton = document.getElementById("pruefenButton");
 pruefenButton.onclick = function (mouseEvent) {
     console.log("CLICK");
     console.log("Der Kollege hat eingeben: ", eingabe.valueAsNumber);
@@ -45,16 +53,16 @@ pruefenButton.onclick = function (mouseEvent) {
             console.log("Volltreffer!");
             restVersuche.innerHTML = anzahlVersuche.toString();
             if (anzahlVersuche == 0) {
-                ausgabe.innerHTML = "Puh Marc, gerade noch so! Die gesuchte Zahl ist in der Tat " + ausgedachteZahl + "! Als Belohnung erhälst einen Hinweis auf das was du dir erhoffst: Als Kind von Mutter, Vater und Oma verging einige Zeit bis das Geburtstagskind das Licht der Welt erblickte. Sie freuten sich auf diesen Tag. Die Sonne strahlte und der Mond leuchtete. Ein Zeitpunkt im Frühling, ach wie es draußen blühte. Wie sahen wohl die drei Monde zur ihrer Zeit aus?";
+                ausgabe.innerHTML = "Puh Lisa, gerade noch so! Die gesuchte Zahl ist in der Tat " + ausgedachteZahl + "! Als Belohnung erhälst einen Hinweis auf das was du dir erhoffst: Als Kind von Mutter, Vater und Oma verging einige Zeit bis das Geburtstagskind das Licht der Welt erblickte. Sie freuten sich auf diesen Tag. Die Sonne strahlte und der Mond leuchtete. Ein Zeitpunkt im Frühling, ach wie es draußen blühte. Wie sahen wohl die drei Monde zur ihrer Zeit aus?";
             }
             else if (anzahlVersuche == 1) {
-                ausgabe.innerHTML = "Sehr gut, Sherlock Marc! Die gesuchte Zahl ist in der Tat " + ausgedachteZahl + "! Als Belohnung erhälst einen Hinweis auf das was du dir erhoffst: Als Kind von Mutter, Vater und Oma verging einige Zeit bis das Geburtstagskind das Licht der Welt erblickte. Sie freuten sich auf diesen Tag. Die Sonne strahlte und der Mond leuchtete. Ein Zeitpunkt im Frühling, ach wie es draußen blühte. Wie sahen wohl die drei Monde zur ihrer Zeit aus?";
+                ausgabe.innerHTML = "Sehr gut, Sherlock Lisa! Die gesuchte Zahl ist in der Tat " + ausgedachteZahl + "! Als Belohnung erhälst einen Hinweis auf das was du dir erhoffst: Als Kind von Mutter, Vater und Oma verging einige Zeit bis das Geburtstagskind das Licht der Welt erblickte. Sie freuten sich auf diesen Tag. Die Sonne strahlte und der Mond leuchtete. Ein Zeitpunkt im Frühling, ach wie es draußen blühte. Wie sahen wohl die drei Monde zur ihrer Zeit aus?";
             }
             else if (anzahlVersuche == 2) {
-                ausgabe.innerHTML = "Krass Marc, ich glaub' mein Schwein pfeift! Die gesuchte Zahl ist in der Tat " + ausgedachteZahl + "! Als Belohnung erhälst einen Hinweis auf das was du dir erhoffst: Als Kind von Mutter, Vater und Oma verging einige Zeit bis das Geburtstagskind das Licht der Welt erblickte. Sie freuten sich auf diesen Tag. Die Sonne strahlte und der Mond leuchtete. Ein Zeitpunkt im Frühling, ach wie es draußen blühte. Wie sahen wohl die drei Monde zur ihrer Zeit aus?";
+                ausgabe.innerHTML = "Krass Lisa, ich glaub' mein Schwein pfeift! Die gesuchte Zahl ist in der Tat " + ausgedachteZahl + "! Als Belohnung erhälst einen Hinweis auf das was du dir erhoffst: Als Kind von Mutter, Vater und Oma verging einige Zeit bis das Geburtstagskind das Licht der Welt erblickte. Sie freuten sich auf diesen Tag. Die Sonne strahlte und der Mond leuchtete. Ein Zeitpunkt im Frühling, ach wie es draußen blühte. Wie sahen wohl die drei Monde zur ihrer Zeit aus?";
             }
             else {
-                ausgabe.innerHTML = "Volltreffer Marc, geh Lotto spielen! Die gesuchte Zahl ist in der Tat " + ausgedachteZahl + "! Als Belohnung erhälst einen Hinweis auf das was du dir erhoffst: Als Kind von Mutter, Vater und Oma verging einige Zeit bis das Geburtstagskind das Licht der Welt erblickte. Sie freuten sich auf diesen Tag. Die Sonne strahlte und der Mond leuchtete. Ein Zeitpunkt im Frühling, ach wie es draußen blühte. Wie sahen wohl die drei Monde zur ihrer Zeit aus?";
+                ausgabe.innerHTML = "Volltreffer Lisa, geh Lotto spielen! Die gesuchte Zahl ist in der Tat " + ausgedachteZahl + "! Als Belohnung erhälst einen Hinweis auf das was du dir erhoffst: Als Kind von Mutter, Vater und Oma verging einige Zeit bis das Geburtstagskind das Licht der Welt erblickte. Sie freuten sich auf diesen Tag. Die Sonne strahlte und der Mond leuchtete. Ein Zeitpunkt im Frühling, ach wie es draußen blühte. Wie sahen wohl die drei Monde zur ihrer Zeit aus?";
             }
         }
         if (ausgedachteZahl < eingabe.valueAsNumber) {
@@ -82,7 +90,7 @@ pruefenButton.onclick = function (mouseEvent) {
         ausgabe.innerHTML = "Du hast alle Versuche aufgebraucht! Die gesuchte Zahl war: " + ausgedachteZahl.toString() + "! Du kannst das Spiel neustarten, indem du eine neue Zufallszahl generierst";
     }
 };
-let generiereNeu = document.getElementById("generiereNeu");
+var generiereNeu = document.getElementById("generiereNeu");
 generiereNeu.onclick = function (mouseEvent) {
     ausgedachteZahl = Math.floor(Math.random() * (1000 - 100 + 1)) + 100;
     console.log("Es wurde eine neue Zahl generiert");
@@ -94,9 +102,9 @@ generiereNeu.onclick = function (mouseEvent) {
     restVersuche.innerHTML = anzahlVersuche.toString();
     tippText.innerHTML = "";
     ausgabe.innerHTML = "";
-    verbleibendeTipps = [...tippFunktionen];
+    verbleibendeTipps = __spreadArray([], tippFunktionen, true);
 };
-let tipp = document.getElementById("tipp");
+var tipp = document.getElementById("tipp");
 tipp.onclick = function (mouseEvent) {
     if (tippBlocker <= 0) {
         if (restTipps === 3) {
@@ -137,7 +145,7 @@ tipp.onclick = function (mouseEvent) {
     }
 };
 function berechneQuersumme(zahl) {
-    return "\n// Die Quersumme der gesuchten Zahl beträgt: " + zahl.toString().split('').map(Number).reduce((a, b) => a + b, 0) + ".";
+    return "\n// Die Quersumme der gesuchten Zahl beträgt: " + zahl.toString().split('').map(Number).reduce(function (a, b) { return a + b; }, 0) + ".";
 }
 function istPrimzahl(number) {
     if (number <= 1 || number % 2 === 0) {
@@ -154,9 +162,9 @@ function istPrimzahl(number) {
     if (number === 2)
         return "\n// Die Zufahlszahl ist eine Primzahl kleiner 500!"; // 2 ist eine Primzahl
     // Nur ungerade Teiler bis zur Quadratwurzel prüfen
-    const wurzel = Math.sqrt(number);
-    let prim = true;
-    for (let i = 3; i <= wurzel; i += 2) {
+    var wurzel = Math.sqrt(number);
+    var prim = true;
+    for (var i = 3; i <= wurzel; i += 2) {
         if (number % i === 0)
             prim = false;
     }
@@ -184,16 +192,17 @@ function istPrimzahl(number) {
     }
 }
 function getFirstNumber(number) {
-    const ziffern = number.toString().split('');
+    var ziffern = number.toString().split('');
     return "\n// Die erste Ziffer der gesuchten Zahl lautet " + Number(ziffern[0]) + ".";
 }
 function getIntervall(number) {
     return "\n// Die Zahl liegt zwischen " + (number - 85) + " und " + (number + 114) + ".";
 }
 function hatDoppelteZiffern(zahl) {
-    const ziffern = zahl.toString().split('');
-    const gesehen = new Set();
-    for (const ziffer of ziffern) {
+    var ziffern = zahl.toString().split('');
+    var gesehen = new Set();
+    for (var _i = 0, ziffern_1 = ziffern; _i < ziffern_1.length; _i++) {
+        var ziffer = ziffern_1[_i];
         if (gesehen.has(ziffer)) {
             return "\n// Die gesuchte Zahl hat mindestens eine identische Ziffer und ist " + ziffern.length + " Ziffern lang.";
         }
@@ -202,12 +211,12 @@ function hatDoppelteZiffern(zahl) {
     return "\n// Die gesuchte Zahl hat keine identische Ziffer und ist " + ziffern.length + " Ziffern lang.";
 }
 function addiereErsteUndZweiteZiffer(zahl) {
-    const ziffern = Math.abs(zahl).toString(); // Negativzeichen ignorieren
-    const erste = Number(ziffern[0]);
+    var ziffern = Math.abs(zahl).toString(); // Negativzeichen ignorieren
+    var erste = Number(ziffern[0]);
     if (ziffern.length < 2) {
         return "\n// Die Wurzel der ersten Ziffer der gesuchten Zahl beträgt " + Number(Math.sqrt(zahl).toFixed(2)) + ".";
     }
-    const zweite = Number(ziffern[1]);
+    var zweite = Number(ziffern[1]);
     return "\n// Die Summe der ersten und zweiten Ziffer der gesuchten Zahl beträgt " + (erste + zweite) + ".";
 }
 function bleibtBeiMultiplikationMit3Unter1000(zahl) {
@@ -233,21 +242,21 @@ function bleibtBeiMultiplikationMit3Unter1000(zahl) {
     }
 }
 function ersteHaelfteDerBinaerdarstellung(zahl) {
-    const bin = Math.abs(zahl).toString(2);
+    var bin = Math.abs(zahl).toString(2);
     // Führende Null hinzufügen, wenn die Länge der Binärdarstellung ungerade ist
-    const binMitFuehrenderNull = bin.length % 2 !== 0 ? '0' + bin : bin;
-    const haelfteLaenge = binMitFuehrenderNull.length / 2;
+    var binMitFuehrenderNull = bin.length % 2 !== 0 ? '0' + bin : bin;
+    var haelfteLaenge = binMitFuehrenderNull.length / 2;
     return "\n// Die erste Hälfte der gesuchten Zahl (Leserichtung) in Binärdarstellung lautet " + binMitFuehrenderNull.slice(0, haelfteLaenge) + ".";
 }
 function tippVergleichMittlereZifferZuDifferenz(zahl) {
-    const ziffern = Math.abs(zahl).toString();
+    var ziffern = Math.abs(zahl).toString();
     if (ziffern.length !== 3) {
         return "\n// Dieser Tipp gilt nur für dreistellige Zahlen.";
     }
-    const erste = Number(ziffern[0]);
-    const mitte = Number(ziffern[1]);
-    const letzte = Number(ziffern[2]);
-    const differenz = Math.abs(erste - letzte);
+    var erste = Number(ziffern[0]);
+    var mitte = Number(ziffern[1]);
+    var letzte = Number(ziffern[2]);
+    var differenz = Math.abs(erste - letzte);
     if (mitte === differenz) {
         return "\n// Die mittlere Ziffer entspricht genau der Differenz der äußeren Ziffern (erste Ziffer minus letzte Ziffer).";
     }
@@ -259,8 +268,8 @@ function tippVergleichMittlereZifferZuDifferenz(zahl) {
     }
 }
 function tippBereichWechselDurchUmdrehen(zahl) {
-    const original = Math.abs(zahl);
-    const umgedreht = Number(original.toString().split('').reverse().join(''));
+    var original = Math.abs(zahl);
+    var umgedreht = Number(original.toString().split('').reverse().join(''));
     function bereich(n) {
         if (n <= 332)
             return '(0–332)';
@@ -268,80 +277,80 @@ function tippBereichWechselDurchUmdrehen(zahl) {
             return '(333–666)';
         return '(667–1000)';
     }
-    const bereichOriginal = bereich(original);
-    const bereichUmdrehen = bereich(umgedreht);
+    var bereichOriginal = bereich(original);
+    var bereichUmdrehen = bereich(umgedreht);
     if (bereichOriginal !== bereichUmdrehen) {
-        return `\n// Beim Umdrehen der gesuchten Zahl wechselt die gedrehte Zahl in den Bereich ${bereichUmdrehen}.`;
+        return "\n// Beim Umdrehen der gesuchten Zahl wechselt die gedrehte Zahl in den Bereich ".concat(bereichUmdrehen, ".");
     }
     else {
-        return `\n// Das Umdrehen der gesuchten Zahl verändert den Bereich nicht – die Zahl bleibt in ${bereichOriginal}.`;
+        return "\n// Das Umdrehen der gesuchten Zahl ver\u00E4ndert den Bereich nicht \u2013 die Zahl bleibt in ".concat(bereichOriginal, ".");
     }
 }
 function teilbarDurch(zahl) {
-    const teiler = [];
-    for (let i = 1; i <= 9; i++) {
+    var teiler = [];
+    for (var i = 1; i <= 9; i++) {
         if (zahl % i === 0) {
             teiler.push(i);
         }
     }
     if (teiler.length < 2) {
-        for (let i1 = 10; i1 <= 19; i1++) {
+        for (var i1 = 10; i1 <= 19; i1++) {
             if (zahl % i1 === 0) {
                 teiler.push(i1);
             }
         }
     }
     if (teiler.length < 2) {
-        for (let i2 = 20; i2 <= 29; i2++) {
+        for (var i2 = 20; i2 <= 29; i2++) {
             if (zahl % i2 === 0) {
                 teiler.push(i2);
             }
         }
     }
     if (teiler.length < 2) {
-        for (let i3 = 30; i3 <= 39; i3++) {
+        for (var i3 = 30; i3 <= 39; i3++) {
             if (zahl % i3 === 0) {
                 teiler.push(i3);
             }
         }
     }
     if (teiler.length < 2) {
-        for (let i4 = 40; i4 <= 49; i4++) {
+        for (var i4 = 40; i4 <= 49; i4++) {
             if (zahl % i4 === 0) {
                 teiler.push(i4);
             }
         }
     }
     if (teiler.length < 2) {
-        for (let i5 = 50; i5 <= 59; i5++) {
+        for (var i5 = 50; i5 <= 59; i5++) {
             if (zahl % i5 === 0) {
                 teiler.push(i5);
             }
         }
     }
     if (teiler.length < 2) {
-        for (let i6 = 60; i6 <= 69; i6++) {
+        for (var i6 = 60; i6 <= 69; i6++) {
             if (zahl % i6 === 0) {
                 teiler.push(i6);
             }
         }
     }
     if (teiler.length < 2) {
-        for (let i7 = 70; i7 <= 79; i7++) {
+        for (var i7 = 70; i7 <= 79; i7++) {
             if (zahl % i7 === 0) {
                 teiler.push(i7);
             }
         }
     }
     if (teiler.length < 2) {
-        for (let i8 = 80; i8 <= 89; i8++) {
+        for (var i8 = 80; i8 <= 89; i8++) {
             if (zahl % i8 === 0) {
                 teiler.push(i8);
             }
         }
     }
     if (teiler.length < 2) {
-        for (let i9 = 90; i9 <= 99; i9++) {
+        for (var i9 = 90; i9 <= 99; i9++) {
             if (zahl % i9 === 0) {
                 teiler.push(i9);
             }
@@ -350,24 +359,24 @@ function teilbarDurch(zahl) {
     return "\n// Die Zufahlszahl ist (mitunter) teilbar durch: " + teilbarDurch(ausgedachteZahl) + ".";
 }
 function tippZiffernNachGroesse(zahl) {
-    const z = Math.abs(zahl);
+    var z = Math.abs(zahl);
     if (z < 100 || z > 999) {
         return "\n// Die gesuchte Zahl ist NICHT dreistellig";
     }
-    const ziffern = z.toString().split('').map(Number);
-    const positionen = ['Hunderterstelle', 'Zehnerstelle', 'Einerstelle'];
+    var ziffern = z.toString().split('').map(Number);
+    var positionen = ['Hunderterstelle', 'Zehnerstelle', 'Einerstelle'];
     // Array mit Ziffer + Position
-    const ziffernMitPosition = ziffern.map((wert, index) => ({
-        wert,
+    var ziffernMitPosition = ziffern.map(function (wert, index) { return ({
+        wert: wert,
         position: positionen[index]
-    }));
+    }); });
     // Sortieren nach Zifferngröße (absteigend)
-    ziffernMitPosition.sort((a, b) => b.wert - a.wert);
+    ziffernMitPosition.sort(function (a, b) { return b.wert - a.wert; });
     // Aufbau des Texts
-    let tipp = "\n// Die Reihenfolge der Ziffern von groß nach klein:";
-    ziffernMitPosition.forEach((ziffer, i) => {
-        const stufe = ['größte', 'zweitgrößte', 'kleinste'][i];
-        tipp += ` Die ${stufe} Ziffer ist an der ${ziffer.position}.`;
+    var tipp = "\n// Die Reihenfolge der Ziffern von groß nach klein:";
+    ziffernMitPosition.forEach(function (ziffer, i) {
+        var stufe = ['größte', 'zweitgrößte', 'kleinste'][i];
+        tipp += " Die ".concat(stufe, " Ziffer ist an der ").concat(ziffer.position, ".");
     });
     tipp += " (Bei gleichen Ziffern gilt die höherwertige Stelle als größer!)";
     return tipp.trim(); // Entfernt letztes Zeilenende
@@ -376,23 +385,24 @@ function zufallsTippOhneWiederholung(zahl) {
     if (verbleibendeTipps.length === 0) {
         return "// Es gibt keine neuen Tipps mehr.";
     }
-    const index = Math.floor(Math.random() * verbleibendeTipps.length);
-    const tippFunktion = verbleibendeTipps.splice(index, 1)[0]; // entfernt die Funktion
+    var index = Math.floor(Math.random() * verbleibendeTipps.length);
+    var tippFunktion = verbleibendeTipps.splice(index, 1)[0]; // entfernt die Funktion
     return tippFunktion(zahl);
 }
-class Student {
-    constructor(name, label) {
+var Student = /** @class */ (function () {
+    function Student(name, label) {
         this.name = "Test";
         this.label = 0;
         this.label = label;
         this.name = name;
     }
-    getLabel(label) {
+    Student.prototype.getLabel = function (label) {
         if (label)
             this.label = label;
         return "Matrikelnummer " + this.label;
-    }
-}
-let s = new Student("Maic Volnhals", 12345);
-let label = s.getLabel();
+    };
+    return Student;
+}());
+var s = new Student("Maic Volnhals", 12345);
+var label = s.getLabel();
 console.log(label);
